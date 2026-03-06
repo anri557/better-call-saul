@@ -61,11 +61,14 @@ const SaulLanding = () => {
       <header className="saul-hero">
   <div className="flag-bg"></div>
 
-  <img 
-    src="/saul-Hero.png" 
-    alt="Saul Goodman" 
-    className="saul-portrait" 
-  />
+  
+<img 
+  src={`${import.meta.env.BASE_URL}saul-Hero.png`} 
+  alt="Saul Goodman" 
+  className="saul-portrait" 
+/>
+
+
   <div className="saul-content">
     <h1 className="saul-title">BETTER CALL <span className="saul-name">SAUL!</span></h1>
     {/* ... rest of your content ... */}
@@ -90,7 +93,7 @@ const SaulLanding = () => {
       loop 
       className="saul-video"
     >
-      <source src="/saul-ad.mp4" type="video/mp4" />
+   <source src={`${import.meta.env.BASE_URL}saul-ad.mp4`} type="video/mp4" />
 
     </video>
 

@@ -1,0 +1,335 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Permanent+Marker&family=Roboto+Condensed:wght@700&display=swap');
+
+:root {
+  --saul-yellow: #ffeb3b;
+  --saul-red: #d32f2f;
+  --saul-blue: #002d62;
+  --saul-gold: #ffd700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
+}
+
+
+.ticker-wrap {
+  background: var(--saul-red);
+  color: var(--saul-yellow);
+  padding: 12px 0;
+  border-bottom: 4px solid #000;
+  overflow: hidden;
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: ticker-move 20s linear infinite;
+}
+
+@keyframes ticker-move {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+.saul-hero {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--saul-blue);
+  color: white;
+  text-align: center;
+  border-bottom: 10px solid var(--saul-red);
+}
+
+.flag-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.saul-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .saul-content {
+    text-align: left;
+    margin-right: 40%;
+    padding-left: 5%;
+  }
+
+  .saul-portrait {
+    right: 2%; 
+    height: 95%; 
+  }
+}
+
+
+@media (max-width: 767px) {
+  .saul-portrait {
+    opacity: 0.4;
+    height: 70%;
+  }
+}
+.saul-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem); 
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 0.9;
+  margin: 0;
+  text-shadow: 6px 6px 0px var(--saul-red), 10px 10px 0px #000;
+}
+
+.saul-name {
+  color: var(--saul-yellow);
+  display: block;
+}
+
+.saul-tagline {
+  font-family: 'Permanent Marker', cursive;
+  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  color: var(--saul-gold);
+  margin-top: 30px;
+  transform: rotate(-2deg);
+}
+
+.underline {
+  text-decoration: underline;
+  color: white;
+}
+
+
+.cta-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.saul-btn {
+  background: var(--saul-yellow);
+  color: #000;
+  border: 5px solid #000;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 10px 10px 0px var(--saul-red);
+  transition: all 0.1s ease;
+}
+
+.saul-btn:hover {
+  background: white;
+  transform: scale(1.05);
+  color:#000;
+}
+
+.saul-btn:active {
+  transform: translate(5px, 5px);
+  box-shadow: 5px 5px 0px var(--saul-red);
+}
+
+.call-btn {
+  background: var(--saul-red);
+  color: white;
+  box-shadow: 10px 10px 0px var(--saul-yellow);
+}
+
+
+.legal-notice {
+  background: var(--saul-yellow);
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 5px solid #000;
+}
+
+.legal-notice h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.legal-notice p {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.call-btn {
+  animation: flash 1s infinite;
+}
+.saul-portrait {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%; 
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .saul-portrait {
+    height: 50%; 
+    opacity: 0.8;
+  }
+}
+.saul-video {
+  width: 100%;
+  display: block;
+  border: 4px solid #000;
+  filter: contrast(1.1) brightness(1.1);
+}
+
+.video-container {
+  
+  max-width: 850px;
+  margin: 0 auto;
+  background: #000;
+  padding: 15px;
+  border: 12px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(0, 210, 133, 0.2);
+  margin-top: 100px;
+}
+.video-caption{
+  text-align: center;
+}
+.contact-saul {
+  padding: 80px 20px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card {
+  background: white;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  border: 8px solid #000;
+  box-shadow: 15px 15px 0px var(--saul-blue);
+  text-align: center;
+}
+
+.highlight-red {
+  color: var(--saul-red);
+  text-decoration: underline;
+}
+
+.saul-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.saul-form input, 
+.saul-form select, 
+.saul-form textarea {
+  padding: 15px;
+  border: 3px solid #000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.saul-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  margin: 0 !important;
+  background: var(--saul-red) !important;
+  color: white !important;
+  box-shadow: 6px 6px 0px #000 !important;
+}
+
+.submit-btn:hover {
+  background: #b71c1c !important;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.saul-modal {
+  background: var(--saul-yellow);
+  border: 10px solid var(--saul-red);
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 50px var(--saul-red);
+  animation: slam 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slam {
+  0% { transform: scale(2); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+  background: var(--saul-red);
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  padding: 30px;
+  color: #000;
+}
+
+.modal-body h2 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+.fine-print {
+  font-size: 0.7rem;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.close-btn {
+  margin-top: 20px !important;
+font-size: 1.2em !important;
+}

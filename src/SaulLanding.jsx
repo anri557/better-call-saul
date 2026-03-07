@@ -37,7 +37,7 @@ const SaulLanding = () => {
 
   return (
     <div className="saul-wrapper">
-      {/* Ticker Banner */}
+
       <div className="ticker-wrap">
         <div className="ticker">
           JUSTICE FOR ALL • 505-503-4455 • DID YOU KNOW YOU HAVE RIGHTS? • BETTER CALL SAUL! 

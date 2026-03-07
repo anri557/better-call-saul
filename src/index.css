@@ -333,3 +333,28 @@ body {
   margin-top: 20px !important;
 font-size: 1.2em !important;
 }
+@media (max-width: 800px) {
+  .saul-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spreads text to top, Saul to bottom */
+    align-items: center;            /* Centers buttons and text */
+    height: 100vh;                  /* Uses the full phone screen */
+    text-align: center;
+    padding: 20px;
+
+  }
+
+  .saul-portrait {
+    height: 45%;            /* Gives Saul his own space at the bottom */
+    width: 100%;
+    object-fit: contain;     /* Prevents him from being cut off */
+    object-position: bottom; /* Makes him stand on the bottom edge */
+    margin-top: auto;  
+    margin-top: 20px;      /* Pushes him down away from the buttons */
+  }
+
+.saul-content{
+  margin-bottom: 20px;
+}
+}

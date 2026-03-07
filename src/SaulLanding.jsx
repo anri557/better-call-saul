@@ -71,7 +71,7 @@ const SaulLanding = () => {
 
   <div className="saul-content">
     <h1 className="saul-title">BETTER CALL <span className="saul-name">SAUL!</span></h1>
-    {/* ... rest of your content ... */}
+
           <h2 className="saul-tagline">"Because you deserve a lawyer that <span className="underline">other</span> lawyers fear."</h2>
           
           <div className="cta-container">

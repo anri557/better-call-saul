@@ -338,20 +338,20 @@ font-size: 1.2em !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Spreads text to top, Saul to bottom */
-    align-items: center;            /* Centers buttons and text */
-    height: 100vh;                  /* Uses the full phone screen */
+    align-items: center;            
+    height: 100vh;                
     text-align: center;
     padding: 20px;
 
   }
 
   .saul-portrait {
-    height: 45%;            /* Gives Saul his own space at the bottom */
+    height: 45%;           
     width: 100%;
-    object-fit: contain;     /* Prevents him from being cut off */
-    object-position: bottom; /* Makes him stand on the bottom edge */
+    object-fit: contain;     
+    object-position: bottom; 
     margin-top: auto;  
-    margin-top: 20px;      /* Pushes him down away from the buttons */
+    margin-top: 20px;      
   }
 
 .saul-content{
